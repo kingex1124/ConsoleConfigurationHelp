@@ -54,7 +54,7 @@ namespace ConsoleConfigurationHelp
             var conn = config.AppSettings.Settings["ESMPConnectionString"].Value;
 
             config.AppSettings.Settings["ESMPConnectionString"].Value = config.AppSettings.Settings["ESMPConnectionString"].Value + "456";
-            config.Save();
+            config.Save(ConfigurationSaveMode.Modified);
         }
     }
 }

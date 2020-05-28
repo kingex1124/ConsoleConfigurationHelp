@@ -22,6 +22,11 @@ namespace ConsoleConfigurationHelp
             return new YElement();
         }
 
+        /// <summary>
+        /// 設定Element元素中的Key值
+        /// </summary>
+        /// <param name="element"></param>
+        /// <returns></returns>
         protected override object GetElementKey(ConfigurationElement element)
         {
             return ((YElement)element).y1;
