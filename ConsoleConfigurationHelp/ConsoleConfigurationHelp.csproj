@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample\IPElement.cs" />
+    <Compile Include="Sample\IPElementCollection.cs" />
+    <Compile Include="Sample\IPSection.cs" />
     <Compile Include="XSection.cs" />
     <Compile Include="YElement.cs" />
     <Compile Include="ZsElementCollection.cs" />

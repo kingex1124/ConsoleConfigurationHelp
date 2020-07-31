@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleConfigurationHelp.Sample;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
@@ -24,7 +25,6 @@ namespace ConsoleConfigurationHelp
             //    }
             //}
 
-           
 
             XSection xsection = ConfigurationManager.GetSection("XSection") as XSection;
 
@@ -39,6 +39,16 @@ namespace ConsoleConfigurationHelp
                 for (int i = 0; i < xsection.zs.Count; i++)
                 {
                     Console.WriteLine("{0} : {1}", xsection.zs[i].y1, xsection.zs[i].y2);
+                }
+            }
+
+            IPSection ipSection = ConfigurationManager.GetSection("IPChangeSection") as IPSection;
+
+            if (ipSection != null)
+            {
+                for (int i = 0; i < ipSection.IPGroup.Count; i++)
+                {
+                    Console.WriteLine("{0} : {1} : {2} : {3} : {4}", ipSection.IPGroup[i].Key, ipSection.IPGroup[i].Name, ipSection.IPGroup[i].ConnectionStringA, ipSection.IPGroup[i].ConnectionStringB, ipSection.IPGroup[i].ConnectionStringC);
                 }
             }
         }
